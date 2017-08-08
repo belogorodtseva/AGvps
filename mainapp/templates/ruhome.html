@@ -1,0 +1,40 @@
+{% extends "homecontacttemp.html" %}
+{% load staticfiles %}
+
+{% block menu %}
+<!--Main Logo-->
+<div class="mainlogo" style="z-index:1;">
+  <center>
+  <div class="mainimg">
+    <a href="/ru/home/">
+  <img src="{% static 'img/logo.png' %}"alt="AG" id = 'blabla'>
+    </a>
+  </div>
+  </center>
+</div>
+
+
+<div class="lang">
+  <li class="dropdown-top">
+    <a class="dropdown-top" >RU</a>
+    <ul class="dropdown-inside">
+    <li><a href="/en/home/">EN</a></li>
+    <li><a href="/ua/home/">UA</a></li>
+    </ul>
+  </li>
+</div>
+  <!--Menu-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-center">
+          <li><a href="/ru/architecture/">АРХИТЕКТУРА</a></li>
+          <li><a href="/ru/design/">ДИЗАЙН</a></li>
+          <li><a href="/ru/services/">УСЛУГИ</a></li>
+          <li><a href="/ru/contact/">КОНТАКТЫ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+{% endblock %}

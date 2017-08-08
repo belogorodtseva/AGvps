@@ -1,0 +1,205 @@
+{% extends "servicestemp.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<!--Main Logo-->
+<div class="mainlogo" style="z-index:1;">
+  <center>
+  <div class="mainimg">
+    <a href="/ru/home/">
+  <img src="{% static 'img/logo.png' %}"alt="AG" id = 'blabla'>
+    </a>
+  </div>
+  </center>
+</div>
+
+
+<div class="lang">
+  <li class="dropdown-top">
+    <a class="dropdown-top" >RU</a>
+    <ul class="dropdown-inside">
+    <li><a href="/en/services/">EN</a></li>
+    <li><a href="/ua/services/">UA</a></li>
+    </ul>
+  </li>
+</div>
+
+<!--Menu-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar" style="display: block;">
+      <ul class="nav navbar-nav navbar-center">
+        <li><a href="/ru/architecture/">АРХИТЕКТУРА</a></li>
+        <li><a href="/ru/design/">ДИЗАЙН</a></li>
+        <li><a href="/ru/services/">УСЛУГИ</a></li>
+        <li><a href="/ru/contact/">КОНТАКТЫ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div  class="sphoto">
+
+      <!-- Slider main container -->
+      <div class="suno">
+      <a href="#archx" id="archy">
+      <div class="swiper-container1 ">
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper" >
+          <!-- Slides -->
+
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/a1.jpg' %}) ; ">  <h2>Архитектура</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/a2.jpg' %}) ; ">  <h2> Архитектура</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/a3.jpg' %}) ; ">  <h2>Архитектура</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/a4.jpg' %}) ; ">  <h2>Архитектура</h2></div>
+
+        </div>
+
+
+      </div>
+      </a>
+      </div>
+
+
+      <!-- Slider main container -->
+      <div class="suno">
+      <a href="#inx" id="iny">
+      <div class="swiper-container2" >
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/d1.jpg' %}) ; ">  <h2>Дизайн интерьера</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/d2.jpg' %}) ; ">  <h2>Дизайн интерьера</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/d3.jpg' %}) ; ">  <h2>Дизайн интерьера</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/d4.jpg' %}) ; ">  <h2>Дизайн интерьера</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/d5.jpg' %}) ; ">  <h2>Дизайн интерьера</h2></div>
+        </div>
+
+      </div>
+      </a>
+      </div>
+
+
+      <!-- Slider main container -->
+      <div class="suno">
+      <a href="#asx" id="asy">
+      <div class="swiper-container3" >
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper" >
+          <!-- Slides -->
+
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/s1.jpg' %}) ; ">  <h2>Авторское сопровождение</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/s2.jpg' %}) ; ">  <h2>Авторское сопровождение</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/s3.jpg' %}) ; ">  <h2>Авторское сопровождение</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/s4.jpg' %}) ; ">  <h2>Авторское сопровождение</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/s5.jpg' %}) ; ">  <h2>Авторское сопровождение</h2></div>
+
+        </div>
+
+
+      </div>
+      </a>
+      </div>
+
+
+      <!-- Slider main container -->
+      <div class="suno">
+      <a href="#prx" id="pry">
+      <div class="swiper-container4" >
+        <!-- Additional required wrapper -->
+
+        <div class="swiper-wrapper" >
+          <!-- Slides -->
+
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/p1.jpg' %}) ; ">  <h2>Предметный дизайн</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/p2.jpg' %}) ; ">  <h2>Предметный дизайн</h2> </div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/p3.jpg' %}) ; ">  <h2>Предметный дизайн</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/p4.jpg' %}) ; ">  <h2>Предметный дизайн</h2></div>
+              <div class="swiper-slide" style="background-image:url({% static 'img/headphoto/p5.jpg' %}) ; ">  <h2>Предметный дизайн</h2></div>
+
+        </div>
+
+      </div>
+      </a>
+      </div>
+
+</div>
+
+
+<!--Main Content-->
+<div class='service' style="position : relative; top : 10px; bottom : 30px; z-index:1;">
+  <div id='as_content' style="display: none;">
+    <section id="asx">
+    {% for AS in Architects_supervision %}
+      <h2>{{AS.name_ru}}</h2>
+      <h3>{{AS.description_ru}}</h3>
+      {% for PAS in Paragraphs_AS %}
+        <p>- {{PAS.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{AS.terms_name_ru}}:{{AS.terms_ru}}</h3>
+      <h3>{{AS.cost_name_ru}}:{{AS.cost_ru}}</h3>
+    {% endfor %}
+  </section>
+  </div>
+
+  <div id='arch_content' style="display: none;">
+    <section id="archx">
+    {% for AR in Architecture %}
+      <h2>{{AR.name_ru}}</h2>
+      <h3>{{AR.description_ru}}</h3>
+      <h3>{{AR.schematic_desing_name_ru}}:</h3>
+      {% for ARSD in Paragraphs_Arch_SD %}
+        <p>- {{ARSD.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{AR.desing_development_name_ru}}:</h3>
+      {% for ARDD in Paragraphs_Arch_DD %}
+        <p>- {{ARDD.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{AR.construction_documents_name_ru}}</h3>
+      <h3>{{AR.construction_documents_description_ru}}</h3>
+      {% for ARCD in Paragraphs_Arch_CD %}
+        <p>- {{ARCD.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{AR.terms_name_ru}}:{{AR.terms_ru}}</h3>
+      <h3>{{AR.cost_name_ru}}:{{AR.cost_ru}}</h3>
+    {% endfor %}
+  </section>
+  </div>
+
+  <div id='indesign_content' style="display: none;">
+  <section id="inx">
+    {% for ID in Interior_design %}
+      <h2>{{ID.name_ru}}</h2>
+      <h3>{{ID.description_ru}}</h3>
+      <h3>{{ID.paragraphs_name_ru}}:</h3>
+      {% for PID in Paragraphs_ID %}
+        <p>- {{PID.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{ID.terms_name_ru}}:{{ID.terms_ru}}</h3>
+      <h3>{{ID.cost_name_ru}}:{{ID.cost_ru}}</h3>
+    {% endfor %}
+  </section>
+  </div>
+
+  <div id='prdesign_content' style="display: none;">
+  <section id="prx">
+    {% for PD in Product_design %}
+      <h2>{{PD.name_ru}}</h2>
+      <h3>{{PD.description_ru}}</h3>
+      <h3>{{PD.paragraphs_name_ru}}:</h3>
+      {% for PPD in Paragraphs_PD %}
+        <p>- {{PPD.paragraph_ru}} </p>
+      {% endfor %}
+      <h3>{{PD.terms_name_ru}}:{{PD.terms_ru}}</h3>
+      <h3>{{PD.cost_name_ru}}:{{PD.cost_ru}}</h3>
+    {% endfor %}
+  </section>
+  </div>
+
+
+
+{% endblock %}

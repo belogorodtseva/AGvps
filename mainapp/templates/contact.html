@@ -1,0 +1,83 @@
+{% extends "homecontacttemp.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" type = "text/css"/>
+{% endblock %}
+{% block menu%}
+
+<!--Main Logo-->
+<div class="mainlogo" style="z-index:1;">
+  <center>
+  <div class="mainimg">
+    <a href="/">
+  <img src="{% static 'img/logo.png' %}"alt="AG" id = 'blabla'>
+    </a>
+  </div>
+  </center>
+</div>
+
+<div class="lang">
+  <li class="dropdown-top">
+    <a class="dropdown-top" >EN</a>
+    <ul class="dropdown-inside">
+    <li><a href="/ru/contact/">RU</a></li>
+    <li><a href="/ua/contact/">UA</a></li>
+    </ul>
+  </li>
+</div>
+  <!--Menu-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-center">
+          <li><a href="/en/architecture/">ARCHITECTURE</a></li>
+          <li><a href="/en/design/">DESIGN</a></li>
+          <li><a href="/en/services/">SERVICES</a></li>
+          <li><a href="/en/contact/">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="contactblock">
+  <div class="col-sm-4 contactform">
+    <center><h3>CONTACT ME</h3></center>
+    <form id="form" method="post">
+      {% csrf_token %}
+      <input id="email" name="email" type="text" placeholder="E-MAIL">
+      <input id="subject" name="subject" type="text" placeholder="SUBJECT">
+      <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+
+    <!--  {{ form }} -->
+      <div class="form-actions">
+        <input id="submit" type="submit" value="SEND">
+      </div>
+
+
+
+
+
+    </form>
+  </div>
+  <div class="col-sm-4 contact">
+    <br>
+          <center><p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +380734725404</p></center>
+          <center><p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> agarchitecture13@gmail.com</p></center>
+          <hr>
+
+          <p> AG architecture - архитектурная мастерская, основанная 2016 года в Киеве, молодым архитектором – Андреем Глущенко.</p>
+
+<p> Концептуальный подход мастерской AG architecture - простой, эргономичный, качественный и лаконичный дизайн, одновременно отличается высокой степенью комфорта и вниманием к деталям. Практические разработки мастерской включают также градостроительные проекты, проекты торговых и офисных центров, проекты жилых домов, ресторанов, квартир и тому подобное.
+
+  </div>
+  <div class="col-sm-4 contact">
+         <img src="{% static 'img/face.png' %}" style='' alt="Adrey">
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends "all.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+  <link rel="stylesheet" href="{% static 'css/services.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type = "text/css"/>
+
+  <style>
+  BODY {
+  }
+  </style>
+
+{% endblock %}
+
+{% block allcontent %}
+
+      {% block content %}
+      {% endblock %}
+
+
+      <div style="height:40px"></div>
+      </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://malsup.github.com/jquery.cycle.all.js"></script>
+  <!-- Swiper JS -->
+  <script src="/static/js/swiper.min.js"></script>
+
+  <script>
+  if(window.screen.width > 80) {
+    $(document).ready(function() {
+      $('.slider1').cycle({
+          fx:     'fade',
+          rev: 1,
+      });
+      $('.slider2').cycle({
+          fx:     'fade',
+          rev: 1,
+      });
+      $('.slider3').cycle({
+          fx:     'fade',
+          rev: 1,
+      });
+      $('.slider4').cycle({
+          fx:     'fade',
+          rev: 1,
+      });
+    });
+  }
+  </script>
+  <script>
+  $(document).ready(function () {
+    var swiper1 = new Swiper('.swiper-container1', {
+       effect: 'fade',
+       autoplay: 2000,
+       speed:1000,
+       autoplayDisableOnInteraction:false,
+   });
+   var swiper2 = new Swiper('.swiper-container2', {
+      effect: 'fade',
+      autoplay: 2000,
+      speed:1000,
+      autoplayDisableOnInteraction:false,
+  });
+  var swiper3 = new Swiper('.swiper-container3', {
+     effect: 'fade',
+     autoplay: 2000,
+     speed:1000,
+     autoplayDisableOnInteraction:false,
+ });
+ var swiper4 = new Swiper('.swiper-container4', {
+    effect: 'fade',
+    autoplay: 2000,
+    speed:1000,
+    autoplayDisableOnInteraction:false,
+});});
+  </script>
+  <script>
+    $(document).ready(function(){
+    $(".sphoto, sphotomob").on("click","a", function (event) {
+     //отменяем стандартную обработку нажатия по ссылке
+     event.preventDefault();
+     //забираем идентификатор бока с атрибута href
+     var id  = $(this).attr('href'),
+     //узнаем высоту от начала страницы до блока на который ссылается якорь
+       top = $(id).offset().top;
+     //анимируем переход на расстояние - top за 1500 мс
+     $('body,html').animate({scrollTop: top}, 1500);
+    });
+    });
+  </script>
+  <script>
+  $(document).ready(function(){
+      $("#archy").click(function(){
+          $("#as_content").hide();
+          $("#indesign_content").hide();
+          $("#prdesign_content").hide();
+          $("#arch_content").show();
+      });
+      $("#asy").click(function(){
+          $("#arch_content").hide();
+          $("#indesign_content").hide();
+          $("#prdesign_content").hide();
+          $("#as_content").show();
+      });
+      $("#iny").click(function(){
+          $("#as_content").hide();
+          $("#arch_content").hide();
+          $("#prdesign_content").hide();
+          $("#indesign_content").show();
+      });
+      $("#pry").click(function(){
+          $("#arch_content").hide();
+          $("#indesign_content").hide();
+          $("#as_content").hide();
+          $("#prdesign_content").show();
+      });
+      $("#archym").click(function(){
+          $("#as_content").hide();
+          $("#indesign_content").hide();
+          $("#prdesign_content").hide();
+          $("#arch_content").show();
+      });
+      $("#asym").click(function(){
+          $("#arch_content").hide();
+          $("#indesign_content").hide();
+          $("#prdesign_content").hide();
+          $("#as_content").show();
+      });
+      $("#inym").click(function(){
+          $("#as_content").hide();
+          $("#arch_content").hide();
+          $("#prdesign_content").hide();
+          $("#indesign_content").show();
+      });
+      $("#prym").click(function(){
+          $("#arch_content").hide();
+          $("#indesign_content").hide();
+          $("#as_content").hide();
+          $("#prdesign_content").show();
+      });
+
+  });
+  </script>
+
+{% endblock %}

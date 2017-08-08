@@ -1,0 +1,194 @@
+
+.arch {
+  display:inline-block;
+  margin-top: 0px;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+
+}
+.archproject {
+
+  display: inline-block;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  top:0;
+  left:0;
+  width: 49%;
+  margin-top: 1.5%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30%;
+}
+
+
+
+.archprojecttext {
+  background-color: white;
+  overflow: hidden;
+  opacity: 0.9;
+  color: black;
+  text-transform: uppercase;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 20%;
+
+  height: 100%;
+  z-index: 5;
+}
+.archproject h2 {
+width:100%;
+float: right;
+font-size: 40px;
+-webkit-margin-before: 0.2em;
+-webkit-margin-after: 0.3em;
+-webkit-margin-start: 0.3em;
+}
+.archproject h3 {
+font-size: 20px;
+float: left;
+-webkit-margin-before: 0.3em;
+-webkit-margin-after: 0.3em;
+-webkit-margin-start: 0.4em;
+-webkit-margin-end: 0.4em;
+}
+
+.mainlogo{
+  background-color: #191919;
+}
+
+
+
+
+
+
+
+  .desktop .archproject {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */
+  /*Добавим вот такой вот код*/
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  /*конец кода с transition*/
+  }
+  .desktop .archproject:hover {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+    filter: none; /* IE 6-9 */
+  }
+
+
+
+
+
+  .ipad .arch {
+
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+  }
+  .ipad .archproject {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */
+  /*Добавим вот такой вот код*/
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  /*конец кода с transition*/
+  }
+
+  .ipad .rotate {
+    transform: rotate(180deg);
+  }
+
+  .ipad .archproject h3 {
+  display: none;
+  }
+
+  .ipad .archprojecttext{
+    opacity: 0.7;
+    width:30%;
+  }
+
+  .ipad .archproject h2 {
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+  float: left;
+  width: 90%;
+  font-size: 4vw;
+  writing-mode:tb-rl;
+  }
+
+}
+
+
+
+  .mobile .arch {
+
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+  .mobile .archproject {
+
+    margin-top: 10px;
+    width: 90%;
+    padding-top: 55%;
+
+  }
+
+  .mobile  .archprojecttext{
+    opacity: 0.8;
+    width:25%;
+  }
+
+  .mobile  .archproject h2 {
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+  float: left;
+  width: 90%;
+  font-size: 6vw;
+  writing-mode:tb-rl;
+  }
+  .mobile .archproject h3 {
+  display: none;
+  }
+
+  .mobile .rotate {
+    transform: rotate(180deg);
+  }
+
+}
+
+@media (max-width:480px){
+
+  .archproject h2 {
+
+
+  font-size: 20px;
+    width: 80%;
+
+
+  }
+}

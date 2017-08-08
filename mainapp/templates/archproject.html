@@ -1,0 +1,93 @@
+{% extends "projecttemplate.html" %}
+{% load staticfiles %}
+
+{% block photos %}
+<!--Main Logo-->
+<div class="mainlogo" style="z-index:1;">
+  <center>
+  <div class="mainimg">
+    <a href="/">
+  <img src="{% static 'img/logo.png' %}"alt="AG" id = 'blabla'>
+    </a>
+  </div>
+  </center>
+</div>
+
+<div class="lang">
+  <li class="dropdown-top">
+    <a class="dropdown-top" >EN</a>
+    <ul class="dropdown-inside">
+    <li><a href="/ru/archproject/">RU</a></li>
+    <li><a href="/ua/archproject/">UA</a></li>
+    </ul>
+  </li>
+</div>
+
+
+<!--Menu-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar" style="display: block;">
+      <ul class="nav navbar-nav navbar-center">
+        <li><a href="/en/architecture/">ARCHITECTURE</a></li>
+        <li><a href="/en/design/">DESIGN</a></li>
+        <li><a href="/en/services/">SERVICES</a></li>
+        <li><a href="/en/contact/">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--Main Content-->
+<div class="projectname" >
+    {% for AP in Arch_projects %}
+      <h2>{{AP.name_en}}</h2>
+    {% endfor %}
+</div>
+
+
+<div class="project" >
+      <!-- Slider main container -->
+    <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+
+
+        {% for AP in Arch_photo %}
+        <div class="swiper-slide" style="background-image:url({{AP.archimg.url}}) ; ">
+
+
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-black"></div>
+    <!-- Navigation -->
+    <div class="swiper-button-next swiper-button-black"></div>
+    <div class="swiper-button-prev swiper-button-black"></div>
+
+
+    </div>
+</div>
+
+
+
+<div class="projectempty" >
+
+</div>
+
+<div class="projecttext" >
+  {% for AP in Arch_projects %}
+    <h3>{{AP.description_en}}</h3>
+  {% endfor %}
+</div>
+
+
+
+<div style="height:40px"></div>
+
+{% endblock %}
