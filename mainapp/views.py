@@ -1,9 +1,14 @@
-from django.shortcuts import render, render_to_response
-from mainapp.models import Design_photo,Design_projects,Arch_photo,Arch_projects,Architects_supervision,Paragraphs_AS,Architecture,Paragraphs_Arch_SD,Paragraphs_Arch_DD,Paragraphs_Arch_CD,Interior_design,Paragraphs_ID,Product_design,Paragraphs_PD
-from mainapp.forms import ContactForm
 
 
+from django.conf import settings
+from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
+
+from django.shortcuts import render, render_to_response
+
+
+
+
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -15,6 +20,9 @@ from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import get_template
+
+from mainapp.models import ContactInfo,ContactLinks,Design_photo,Design_projects,Arch_photo,Arch_projects,Architects_supervision,Paragraphs_AS,Architecture,Paragraphs_Arch_SD,Paragraphs_Arch_DD,Paragraphs_Arch_CD,Interior_design,Paragraphs_ID,Product_design,Paragraphs_PD
+from mainapp.forms import ContactForm
 
 
 def index(request):
@@ -63,21 +71,35 @@ def services(request):
     }
     return render(request, 'services.html', content)
 
+
 def contact(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['annbelogorodtseva@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('thanks')
-    return render(request, "contact.html", {'form': form})
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        print('yes')
+        name = form.cleaned_data.get('name')
+        email = form.cleaned_data.get('email')
+        subject = form.cleaned_data.get('subject')
+        message = form.cleaned_data.get('message')
+        from_email = settings.EMAIL_HOST_USER
+        to_email = ['annbelogorodtseva@gmail.com']
+        contact_message= "NAME: \n%s \n\nMESSAGE: \n%s \n\n from %s"%(
+                name,
+                message,
+                email)
+        send_mail(subject,
+                contact_message,
+                from_email,
+                to_email,
+                fail_silently=True)
+    xcontent = {
+        'form': form,
+        'ContactInfo' : ContactInfo.objects.all().order_by('number'),
+        'ContactLinks' : ContactLinks.objects.all().order_by('number'),
+    }
+    return render(request, "contact.html", xcontent)
+
+
+
 
 def thanks(request):
     return HttpResponse('Thank you for your message.')
@@ -88,13 +110,13 @@ def ruindex(request):
 
 def ruarchitecture(request):
     xcontent = {
-        'Arch_projects' : Arch_projects.objects.all().order_by('id'),
+        'Arch_projects' : Arch_projects.objects.all().order_by('number'),
     }
     return render(request, 'ruarchitecture.html', xcontent)
 
 def rudesign(request):
     xcontent = {
-        'Design_projects' : Design_projects.objects.all().order_by('id'),
+        'Design_projects' : Design_projects.objects.all().order_by('number'),
     }
     return render(request, 'rudesign.html', xcontent)
 

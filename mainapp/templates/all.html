@@ -8,7 +8,17 @@
   <link rel="stylesheet" href="{% static 'css/all.css' %}" type = "text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  @font-face {
 
+    font-family: Cen Got;
+
+    src: local("Cen Got"),
+
+         url("{% static 'fonts/CenturyGothic.ttf' %}");
+
+  }
+  </style>
 
 
   {% block headin %}
@@ -22,6 +32,7 @@
   <span class="svg_anm"></span>
   <img src="{% static 'img/gif.gif' %}"alt="AG" id = 'blabla'>
 </div></center></div>
+
 
 
 
@@ -84,6 +95,21 @@
       }); }); });
   }
   </script>
+
+<script>
+
+
+
+  $(document).ready(function(){
+    $(".dropdown-top").click(function(){
+    $(".dropdown-inside").show().delay(3000).fadeOut();
+  });
+  });
+
+
+
+</script>
+
 
   <!--Preloader-->
 

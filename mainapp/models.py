@@ -1,4 +1,6 @@
+
 from django.db import models
+
 #################################################################### SERVICES #####
 
 class Architects_supervision(models.Model):
@@ -171,8 +173,7 @@ class Paragraphs_PD(models.Model):
 
 class Arch_projects(models.Model):
     name_en = models.CharField(max_length=300)
-    name_ru = models.CharField(max_length=300)
-    name_ua = models.CharField(max_length=300)
+
     description_en = models.CharField(max_length=600)
     description_ru = models.CharField(max_length=600)
     description_ua = models.CharField(max_length=600)
@@ -194,8 +195,7 @@ class Arch_photo(models.Model):
 
 class Design_projects(models.Model):
     name_en = models.CharField(max_length=300)
-    name_ru = models.CharField(max_length=300)
-    name_ua = models.CharField(max_length=300)
+
     description_en = models.CharField(max_length=600)
     description_ru = models.CharField(max_length=600)
     description_ua = models.CharField(max_length=600)
@@ -213,3 +213,20 @@ class Design_photo(models.Model):
 
     def __str__(self):
         return str(self.project)
+
+class ContactInfo(models.Model):
+    block_en = models.CharField(max_length=3000)
+    block_ru = models.CharField(max_length=3000)
+    block_ua = models.CharField(max_length=3000)
+    number = models.IntegerField(default='1')
+
+    def __str__(self):
+        return str(self.block_en)
+
+class ContactLinks(models.Model):
+    img = models.FileField(null=True)
+    link = models.CharField(max_length=300)
+    number = models.IntegerField(default='1')
+
+    def __str__(self):
+        return str(self.link)

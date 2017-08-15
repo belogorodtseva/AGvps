@@ -10,6 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
+
+EMAIL_USE_TLS=True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'annbelogorodtseva@gmail.com'
+EMAIL_HOST_PASSWORD = 'lovemybitch00'
+EMAIL_PORT = 587
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -73,13 +80,25 @@ WSGI_APPLICATION = 'AGsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
+#
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'agvps',
+      'USER': 'django',
+      'PASSWORD': 'agarchitecture13', 
+      'HOST': 'localhost',
+      'PORT': '',
+            }
 }
+
+
 
 
 # Password validation
@@ -119,18 +138,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-
+STATIC_ROOT = '/home/django/AGvps/static/'
 STATIC_URL = '/static/'
 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = '/home/django/AGvps/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
-
-
-# Настройки почтового сервера
-EMAIL_BACKEND =  'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'annbelogorodtseva@gmail.com'
-EMAIL_HOST_USER = 'annbelogorodtseva@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
