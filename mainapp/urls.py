@@ -28,5 +28,5 @@ urlpatterns = [
     url(r'^ua/designproject/(?P<pk>[0-9]+)/', views.uadesignproject, name='uadesignproject'),
 
 
-    url(r'^thanks/$', views.thanks, name='thanks'),
+    
     ]

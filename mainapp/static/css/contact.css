@@ -13,7 +13,7 @@ position: relative;
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #bdbdbd;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
@@ -22,7 +22,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #bdbdbd;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
@@ -31,7 +31,7 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
 
 input::placeholder, textarea::placeholder {
   color: #bdbdbd;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:focus::placeholder, textarea:focus::placeholder {
@@ -40,7 +40,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 input::-ms-placeholder, textarea::-ms-placeholder {
   color: #bdbdbd;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
@@ -51,7 +51,7 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
   color: #e6e5e5;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
@@ -60,7 +60,7 @@ input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-inpu
 
 input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
   color: #e6e5e5;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
@@ -69,7 +69,7 @@ input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
   color: #e6e5e5;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:hover:focus::placeholder, textarea:hover:focus::placeholder {
@@ -78,7 +78,7 @@ input:hover:focus::placeholder, textarea:hover:focus::placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
   color: #e6e5e5;
-  font-size: 0.875em;
+  font-size: 0.975em;
 }
 
 input:hover:focus::-ms-placeholder, textarea:hover:focus:-ms-placeholder {
@@ -100,7 +100,7 @@ input {
   border-radius: 0;
 
 
-  font-size: 0.875em;
+  font-size: 0.975em;
   width: 100%;
   height: 7vh;
   padding: 0px 15px 0px 15px;
@@ -137,7 +137,7 @@ textarea {
 
   color: #191919;
 
-  font-size: 0.875em;
+  font-size: 0.975em;
   border: none;
   border-bottom: solid 1px #ccc;
 
@@ -163,7 +163,7 @@ input:-webkit-autofill {
 
 
 
-  font-size: 0.875em;
+  font-size: 0.975em;
   color: #191919;
 
   outline:none;
@@ -218,7 +218,7 @@ input:-webkit-autofill {
     width: 100%;
   }
   .mobile .contact p{
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
 

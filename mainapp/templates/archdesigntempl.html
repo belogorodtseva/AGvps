@@ -3,7 +3,7 @@
 
 {% block headin %}
   <link rel="stylesheet" href="{% static 'css/archdesign.css' %}" type = "text/css"/>
-  <link rel="stylesheet" href="{% static 'css/archslider.css' %}" type = "text/css"/>
+  
 
   <style>
   BODY {
@@ -19,84 +19,48 @@
 {% endblock %}
 
   <script>
-  if(window.screen.width > 1365) {
 
-// project mask
-    $(document).ready(function(){
-      $('.archprojecttext').each(function(){
-        $(this).animate({opacity:'0.3'},1);
-        $(this).mouseover(function(){
-          $(this).stop().stop()
-          .animate({opacity:'0.9'},200)
-          .animate({width:'50%'},600);
-        });
-        $(this).mouseout(function(){
-          $(this).stop()
-          .animate({opacity:'0.3'},200)
-          .animate({width:'20%'},600);;
 
-        }); }); });
+  $(document).ready(function()
+  {   if( navigator.userAgent.match(/Android/i)
+     || navigator.userAgent.match(/webOS/i)
+     || navigator.userAgent.match(/iPhone/i)
+     || navigator.userAgent.match(/iPod/i)
+     || navigator.userAgent.match(/BlackBerry/i)
+     || navigator.userAgent.match(/Windows Phone/i)
+     ){
 
-        }
-/*    $(function(){
-        var scroller = $('#scroller div.innerScrollArea');
-        var scrollerContent = scroller.children('ul');
-        scrollerContent.children().clone().appendTo(scrollerContent);
-        var curX = 0;
-        scrollerContent.children().each(function(){
-            var $this = $(this);
-            $this.css('left', curX);
-            curX += $this.outerWidth(true);
-        });
-        var fullW = curX / 2;
-        var viewportW = scroller.width();
+      }
+    else if (navigator.userAgent.match(/iPad/i)) {
 
-        // Scrolling speed management
-        var controller = {curSpeed:0, fullSpeed:2};
-        var $controller = $(controller);
-        var tweenToNewSpeed = function(newSpeed, duration)
-        {
-            if (duration === undefined)
-                duration = 600;
-            $controller.stop(true).animate({curSpeed:newSpeed}, duration);
-        };
+    }
+     else {
 
-        // Scrolling management; start the automatical scrolling
-        var doScroll = function()
-        {
-            var curX = scroller.scrollLeft();
-            var newX = curX + controller.curSpeed;
-            if (newX > fullW*2 - viewportW)
-                newX -= fullW;
-            scroller.scrollLeft(newX);
-        };
-        setInterval(doScroll, 20);
-        tweenToNewSpeed(controller.fullSpeed);
-    });
-  }
-  if(window.screen.width < 480) {
+       $('.archprojecttext').each(function(){
+         $(this).animate({opacity:'0.5'},1);
+         $(this).mouseover(function(){
+           $(this).stop().stop()
+           .animate({opacity:'0.9'},200);
 
-    $(document).ready(function() {
-      $('.slider').cycle({
-          fx:     'fade',
-          rev: 1,
-      }); });
+         });
+         $(this).mouseout(function(){
+           $(this).stop()
+           .animate({opacity:'0.5'},200);
 
-    }*/
-  </script>
+
+         }); });
+
+      }
+  });
+</script>
+
+
 
   <script>
     $(document).ready(function(){
-      $('.arslider').glide({
-      autoplay: 3500,
-      hoverpause: true, // set to false for nonstop rotate
-      arrowRightText: '&rarr;',
-      arrowLeftText: '&larr;'
-    });   });
-
+  $( ".arch .ar:nth-child(2n+1)" ).addClass("intro");
+  });
   </script>
-
-
 
 
   {% endblock %}

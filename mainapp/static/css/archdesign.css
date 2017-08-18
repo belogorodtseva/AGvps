@@ -10,6 +10,8 @@
 }
 .archproject {
 
+  float: right;
+
   display: inline-block;
   background-size: cover;
   background-position: 50% 50%;
@@ -24,7 +26,9 @@
   padding-top: 30%;
 }
 
-
+.rotate {
+  transform: rotate(180deg);
+}
 
 .archprojecttext {
   background-color: white;
@@ -43,18 +47,14 @@
 .archproject h2 {
 width:100%;
 float: right;
-font-size: 40px;
+font-size: 3vw;
 -webkit-margin-before: 0.2em;
 -webkit-margin-after: 0.3em;
 -webkit-margin-start: 0.3em;
+writing-mode:tb-rl;
 }
 .archproject h3 {
-font-size: 20px;
-float: left;
--webkit-margin-before: 0.3em;
--webkit-margin-after: 0.3em;
--webkit-margin-start: 0.4em;
--webkit-margin-end: 0.4em;
+display: none;
 }
 
 .mainlogo{
@@ -191,4 +191,18 @@ float: left;
 
 
   }
+}
+
+
+.intro .archproject{
+  float: left;
+}
+
+.intro .archproject .archprojecttext{
+  left:0;
+}
+
+.intro .archproject .archprojecttext h2{
+  float: left;
+  transform: rotate(180deg);
 }

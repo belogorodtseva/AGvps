@@ -174,12 +174,11 @@ class Paragraphs_PD(models.Model):
 class Arch_projects(models.Model):
     name_en = models.CharField(max_length=300)
 
-    description_en = models.CharField(max_length=600)
-    description_ru = models.CharField(max_length=600)
-    description_ua = models.CharField(max_length=600)
+    description_en = models.CharField(max_length=600, null=True, blank=True)
+    description_ru = models.CharField(max_length=600, null=True, blank=True)
+    description_ua = models.CharField(max_length=600, null=True, blank=True)
     mainimg = models.FileField(null=True)
 
-    side = models.CharField(max_length=20, default='L')
     number = models.IntegerField(default='1')
 
     def __str__(self):
@@ -196,11 +195,11 @@ class Arch_photo(models.Model):
 class Design_projects(models.Model):
     name_en = models.CharField(max_length=300)
 
-    description_en = models.CharField(max_length=600)
-    description_ru = models.CharField(max_length=600)
-    description_ua = models.CharField(max_length=600)
+    description_en = models.CharField(max_length=600, null=True, blank=True)
+    description_ru = models.CharField(max_length=600, null=True, blank=True)
+    description_ua = models.CharField(max_length=600, null=True, blank=True)
     mainimg = models.FileField(null=True)
-    side = models.CharField(max_length=20, default='L')
+
     number = models.IntegerField(default='1')
 
     def __str__(self):

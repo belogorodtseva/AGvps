@@ -30,7 +30,7 @@ position: relative;
 
 
 .swiper-slide h2{
-  margin-top: 20%;
+  margin-top: 21%;
   color: white;
   text-decoration: none;
   font-size: 3vw;
@@ -82,7 +82,7 @@ a:hover{
 
   .mobile .swiper-slide h2{
 
-    font-size: 5vh;
+    font-size: 4.8vh;
     text-shadow: 3px 3px #000;
 
 

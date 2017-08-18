@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 EMAIL_USE_TLS=True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'annbelogorodtseva@gmail.com'
-EMAIL_HOST_PASSWORD = 'lovemybitch00'
+EMAIL_HOST_USER = 'agarchitecture13@gmail.com'
+EMAIL_HOST_PASSWORD = '13Q1w2e3r4t5y666'
 EMAIL_PORT = 587
 
 import os
@@ -32,7 +32,7 @@ SECRET_KEY = ')2w4zn!m*vpin=8pt#y03=ilcjapj2$)tt8tldh3*04_5ct^vx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.agarch.com.ua','agarch.com.ua','185.67.2.173']
 
 
 # Application definition
@@ -81,18 +81,13 @@ WSGI_APPLICATION = 'AGsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 #
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
+
 DATABASES = {
   'default': {
       'ENGINE': 'django.db.backends.postgresql_psycopg2',
       'NAME': 'agvps',
       'USER': 'django',
-      'PASSWORD': 'agarchitecture13', 
+      'PASSWORD': 'agarchitecture13',
       'HOST': 'localhost',
       'PORT': '',
             }

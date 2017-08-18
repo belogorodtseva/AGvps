@@ -30,7 +30,7 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="myNavbar" style="display: block;">
       <ul class="nav navbar-nav navbar-center">
-        <li><a href="/en/architecture/">ARCHITECTURE</a></li>
+        <li><a style="color:#191919;" href="/en/architecture/">ARCHITECTURE</a></li>
         <li><a href="/en/design/">DESIGN</a></li>
         <li><a href="/en/services/">SERVICES</a></li>
         <li><a href="/en/contact/">CONTACT</a></li>
@@ -43,9 +43,10 @@
 
 <div class="arch" >
     {% for AP in Arch_projects %}
-      {% if AP.side == 'L' %}
-      <a href="{% url 'archproject' pk=AP.pk %}">
-        <div class="archproject" style="background-image:url({{ AP.mainimg.url }});float:right;">
+
+
+      <a class="ar" href="{% url 'archproject' pk=AP.pk %}">
+        <div class="archproject" style="background-image:url({{ AP.mainimg.url }});">
 
             <div class="archprojecttext" >
             <h2>{{AP.name_en}}</h2>
@@ -54,19 +55,7 @@
 
         </div>
       </a>
-      {% endif %}
-      {% if AP.side == 'R' %}
-      <a href="{% url 'archproject' pk=AP.pk %}">
-        <div class="archproject"  style="background-image:url({{ AP.mainimg.url }});">
 
-            <div class="archprojecttext" style="left:0;">
-            <h2 class="rotate" style="float:left;">{{AP.name_en}}</h2>
-            <h3 style="float:right">{{AP.description_en}}</h3>
-          </div>
-
-        </div>
-      </a>
-      {% endif %}
     {% endfor %}
 </div>
 

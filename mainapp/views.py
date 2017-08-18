@@ -25,18 +25,19 @@ from mainapp.models import ContactInfo,ContactLinks,Design_photo,Design_projects
 from mainapp.forms import ContactForm
 
 
+
 def index(request):
     return render(request, 'home.html')
 
 def architecture(request):
     xcontent = {
-        'Arch_projects' : Arch_projects.objects.all().order_by('id'),
+        'Arch_projects' : Arch_projects.objects.all().order_by('number'),
     }
     return render(request, 'architecture.html', xcontent)
 
 def design(request):
     xcontent = {
-        'Design_projects' : Design_projects.objects.all().order_by('id'),
+        'Design_projects' : Design_projects.objects.all().order_by('number'),
     }
     return render(request, 'design.html', xcontent)
 
@@ -81,16 +82,12 @@ def contact(request):
         subject = form.cleaned_data.get('subject')
         message = form.cleaned_data.get('message')
         from_email = settings.EMAIL_HOST_USER
-        to_email = ['annbelogorodtseva@gmail.com']
         contact_message= "NAME: \n%s \n\nMESSAGE: \n%s \n\n from %s"%(
                 name,
                 message,
                 email)
-        send_mail(subject,
-                contact_message,
-                from_email,
-                to_email,
-                fail_silently=True)
+        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+
     xcontent = {
         'form': form,
         'ContactInfo' : ContactInfo.objects.all().order_by('number'),
@@ -152,7 +149,26 @@ def ruservices(request):
     return render(request, 'ruservices.html', content)
 
 def rucontact(request):
-    return render(request, 'rucontact.html')
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        print('yes')
+        name = form.cleaned_data.get('name')
+        email = form.cleaned_data.get('email')
+        subject = form.cleaned_data.get('subject')
+        message = form.cleaned_data.get('message')
+        from_email = settings.EMAIL_HOST_USER
+        contact_message= "NAME: \n%s \n\nMESSAGE: \n%s \n\n from %s"%(
+                name,
+                message,
+                email)
+        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+
+    xcontent = {
+        'form': form,
+        'ContactInfo' : ContactInfo.objects.all().order_by('number'),
+        'ContactLinks' : ContactLinks.objects.all().order_by('number'),
+    }
+    return render(request, "rucontact.html", xcontent)
 
 #### UA ####
 
@@ -161,13 +177,13 @@ def uaindex(request):
 
 def uadesign(request):
     xcontent = {
-        'Design_projects' : Design_projects.objects.all().order_by('id'),
+        'Design_projects' : Design_projects.objects.all().order_by('number'),
     }
     return render(request, 'uadesign.html', xcontent)
 
 def uaarchitecture(request):
     xcontent = {
-        'Arch_projects' : Arch_projects.objects.all().order_by('id'),
+        'Arch_projects' : Arch_projects.objects.all().order_by('number'),
     }
     return render(request, 'uaarchitecture.html', xcontent)
 
@@ -204,4 +220,23 @@ def uaservices(request):
     return render(request, 'uaservices.html', content)
 
 def uacontact(request):
-    return render(request, 'uacontact.html')
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        print('yes')
+        name = form.cleaned_data.get('name')
+        email = form.cleaned_data.get('email')
+        subject = form.cleaned_data.get('subject')
+        message = form.cleaned_data.get('message')
+        from_email = settings.EMAIL_HOST_USER
+        contact_message= "NAME: \n%s \n\nMESSAGE: \n%s \n\n from %s"%(
+                name,
+                message,
+                email)
+        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+
+    xcontent = {
+        'form': form,
+        'ContactInfo' : ContactInfo.objects.all().order_by('number'),
+        'ContactLinks' : ContactLinks.objects.all().order_by('number'),
+    }
+    return render(request, "uacontact.html", xcontent)
