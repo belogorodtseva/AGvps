@@ -86,7 +86,7 @@ def contact(request):
                 name,
                 message,
                 email)
-        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+        send_mail(subject,contact_message,from_email,['andreyglushchenko94@gmail.com'],fail_silently=False)
 
     xcontent = {
         'form': form,
@@ -98,8 +98,7 @@ def contact(request):
 
 
 
-def thanks(request):
-    return HttpResponse('Thank you for your message.')
+
 #### RU ####
 
 def ruindex(request):
@@ -161,7 +160,7 @@ def rucontact(request):
                 name,
                 message,
                 email)
-        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+        send_mail(subject,contact_message,from_email,['andreyglushchenko94@gmail.com'],fail_silently=False)
 
     xcontent = {
         'form': form,
@@ -232,7 +231,7 @@ def uacontact(request):
                 name,
                 message,
                 email)
-        send_mail(subject,contact_message,from_email,['office@agarch.com.ua'],fail_silently=False)
+        send_mail(subject,contact_message,from_email,['andreyglushchenko94@gmail.com'],fail_silently=False)
 
     xcontent = {
         'form': form,
